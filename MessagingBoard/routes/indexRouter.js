@@ -27,4 +27,12 @@ indexRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+indexRouter.get("/:messageIndex", (req, res) => {
+  const messageIndex = parseInt(req.params.messageIndex, 10) - 1;
+
+  const message = messages[messageIndex];
+
+  res.render("message", { message })
+})
+
 module.exports = indexRouter;

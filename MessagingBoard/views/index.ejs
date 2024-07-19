@@ -9,12 +9,14 @@
     <header>
         <h1><%= title %></h1>
     </header>
-    <% messages.map((message) => { %>
+    <% messages.map((message, index) => { %>
         <div>
             <div><%= message.user %></div>
             <div><%= message.text %></div>
             <div><%= message.added.toLocaleDateString() %> <%= message.added.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) %></div>
+            <a href="/<%= index + 1 %>"><button>Open</button></a>
         </div>
     <% }) %>
+    <a href="/new"><button>Create post</button></a>
 </body>
 </html>
