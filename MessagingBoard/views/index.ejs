@@ -6,6 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1><%= title %></h1>
+    </header>
+    <% messages.map((message) => { %>
+        <div>
+            <div><%= message.user %></div>
+            <div><%= message.text %></div>
+            <div><%= message.added.toLocaleDateString() %> <%= message.added.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) %></div>
+        </div>
+    <% }) %>
 </body>
 </html>
