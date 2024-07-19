@@ -1,0 +1,15 @@
+{
+  "name": "messagingboard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "node --watch app.js"
+  },
+  "author": "Connor Wiggins",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
