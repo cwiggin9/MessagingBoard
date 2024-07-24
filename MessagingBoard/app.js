@@ -11,4 +11,4 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/new", messagesRouter);
 app.use("/", indexRouter);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
